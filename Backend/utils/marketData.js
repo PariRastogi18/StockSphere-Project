@@ -1,0 +1,19 @@
+const marketData = {
+  INFY: 1555.45,
+  ONGC: 116.8,
+  TCS: 3194.8,
+  KPITTECH: 266.45,
+  QUICKHEAL: 308.55,
+  WIPRO: 577.75,
+  "M&M": 779.8,
+  RELIANCE: 2112.4,
+  HUL: 512.4,
+  HDFCBANK: 1522.35,
+  ITC: 207.9,
+  SBIN: 430.2,
+  TATAPOWER: 124.15,
+  EVEREADY: 312.35,
+  JUBLFOOD: 3082.65,
+};
+
+module.exports = marketData;
