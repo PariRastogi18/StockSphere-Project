@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-
+import { useHoldings } from "../hooks/useHoldings";
 import axios from "axios";
 
 import GeneralContext from "./GeneralContext";
@@ -13,12 +13,11 @@ import {
   MoreHoriz,
 } from "@mui/icons-material";
 
-import { watchlist } from "../data/data";
 import { DoughnutChart } from "./DoughnoutChart";
 
-const labels = watchlist.map((subArray) => subArray["name"]);
-
 const WatchList = () => {
+  const watchlist = useHoldings();
+  const labels = watchlist.map((stock) => stock.name);
   const data = {
     labels,
     datasets: [
@@ -119,7 +118,7 @@ const WatchListItem = ({ stock }) => {
           {stock.isDown ? (
             <KeyboardArrowDown className="down" />
           ) : (
-            <KeyboardArrowUp className="down" />
+            <KeyboardArrowUp className="up" />
           )}
           <span className="price">{stock.price}</span>
         </div>

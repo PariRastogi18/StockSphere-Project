@@ -1,4 +1,5 @@
 import React from "react";
+const user = JSON.parse(localStorage.getItem("user"));
 
 const Summary = () => {
   return (

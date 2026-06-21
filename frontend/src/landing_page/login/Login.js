@@ -39,11 +39,15 @@ const Login = () => {
         },
         { withCredentials: true },
       );
-      console.log(data);
+
+      console.log("Full Response:", data);
+      console.log("User Data:", data.user);
+
       const { success, message } = data;
       console.log("Response:", data);
       console.log("Success:", success);
       if (success) {
+        localStorage.setItem("user", JSON.stringify(data.user));
         handleSuccess(message);
         setTimeout(() => {
           window.location.replace("http://localhost:3001");
@@ -63,40 +67,62 @@ const Login = () => {
   };
 
   return (
-    <>
-      <div className="container mt-5 mb-5">
-        <div className="form_container" style={{ margin: "auto" }}>
-          <h2>Login Account</h2>
+    <section className="container my-5">
+      <div className="row justify-content-center px-2 px-sm-3">
+        <div
+          className="form_container"
+          style={{
+            width: "100%",
+            margin: "auto",
+            padding: "clamp(1.25rem, 5vw, 2rem) clamp(1rem, 6vw, 3rem)",
+          }}
+        >
+          <h2
+            style={{
+              fontSize: "clamp(1.5rem, 5vw, 2rem)",
+              lineHeight: "1.3",
+            }}
+          >
+            Login Account
+          </h2>
           <form onSubmit={handleSubmit}>
             <div>
               <label htmlFor="email">Email</label>
               <input
+                id="email"
                 type="email"
                 name="email"
                 value={email}
                 placeholder="Enter your email"
                 onChange={handleOnChange}
+                autoComplete="email"
+                required
               />
             </div>
             <div>
               <label htmlFor="password">Password</label>
               <input
+                id="password"
                 type="password"
                 name="password"
                 value={password}
                 placeholder="Enter your password"
                 onChange={handleOnChange}
+                autoComplete="current-password"
+                required
               />
             </div>
-            <button type="submit">Submit</button>
-            <span>
+            <button type="submit" style={{ width: "100%" }}>
+              Submit
+            </button>
+            <span className="text-center">
               Already have an account? <Link to={"/signup"}>Signup</Link>
             </span>
           </form>
           <ToastContainer />
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

@@ -1,36 +1,51 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 function Hero() {
   return (
-    <div className="container">
-      <div className="row text-center p-5">
-        <img src="media/images/homeHero.png" className="mb-5" />
+    <section className="container">
+      <div className="row justify-content-center text-center px-3 py-4 px-md-5 py-md-5">
+        <img
+          src="media/images/homeHero.png"
+          alt="Online investing platform"
+          className="img-fluid mb-4 mb-md-5"
+          style={{ maxWidth: "780px", width: "100%" }}
+        />
         <h1
+          className="mb-3"
           style={{
-            fontSize: "1.75",
+            fontSize: "clamp(1.75rem, 4vw, 2.75rem)",
             opacity: "0.9",
             lineHeight: "1.25",
             fontWeight: "400",
-            marginTop: "10px",
           }}
         >
           Invest in everything
         </h1>
-        <p className="mb-5" style={{ fontSize: "1.25rem" }}>
+        <p
+          className="mx-auto mb-4 mb-md-5"
+          style={{
+            maxWidth: "720px",
+            fontSize: "clamp(1rem, 2.5vw, 1.25rem)",
+            lineHeight: "1.6",
+          }}
+        >
           Online platform to invest in stocks, derivatives, mutual funds, ETFs,
           bonds, and more.
         </p>
         <Link
           to="/signup"
-          className="fs-5 mb-5"
+          className="d-inline-block mb-4 mb-md-5"
           style={{
-            width: "20%",
+            minWidth: "180px",
+            maxWidth: "260px",
+            width: "fit-content",
             margin: "0 auto",
             backgroundColor: "blue",
             borderRadius: "3px",
             color: "white",
-            padding: "7px",
-            fontSize: "large",
+            padding: "9px 20px",
+            fontSize: "1.1rem",
             border: "none",
             textDecoration: "none",
           }}
@@ -38,7 +53,7 @@ function Hero() {
           Signup for free
         </Link>
       </div>
-    </div>
+    </section>
   );
 }
 

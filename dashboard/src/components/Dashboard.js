@@ -32,6 +32,7 @@ const Dashboard = () => {
 
     verifyUser();
   }, []);
+
   return (
     <div className="dashboard-container">
       <GeneralContextProvider>

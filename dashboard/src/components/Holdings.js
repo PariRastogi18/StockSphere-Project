@@ -1,37 +1,11 @@
-import { useEffect, useState } from "react";
-import { io } from "socket.io-client";
-import axios from "axios";
 import { VerticalGraph } from "./VerticalGraph";
-
+import { useHoldings } from "../hooks/useHoldings";
 // import { holdings } from "../data/data";
-const socket = io("http://localhost:5000");
 const Holdings = () => {
-  const [allHoldings, setAllHoldings] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get("http://localhost:5000/allHoldings")
-      .then((res) => {
-        console.log(res.data);
-        setAllHoldings(res.data);
-      })
-      .catch((err) => {
-        console.log("Error:=>", err);
-      });
-  }, []);
-
-  useEffect(() => {
-    socket.on("priceUpdate", (updatedHoldings) => {
-      setAllHoldings(updatedHoldings);
-    });
-
-    return () => {
-      socket.off("priceUpdate");
-    };
-  }, []);
+  const allHoldings = useHoldings();
 
   // const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-  const labels = allHoldings.map((subArray) => subArray["name"]);
+  const labels = allHoldings.map((stock) => stock.name);
 
   const data = {
     labels,
@@ -82,6 +56,10 @@ const Holdings = () => {
             const isProfit = curValue - stock.avg * stock.qty >= 0.0;
             const profClass = isProfit ? "profit" : "loss";
             const dayClass = stock.isLoss ? "loss" : "profit";
+            const netChange = (
+              ((stock.price - stock.avg) / stock.avg) *
+              100
+            ).toFixed(2);
 
             return (
               <tr key={index}>
@@ -93,7 +71,7 @@ const Holdings = () => {
                 <td className={profClass}>
                   {(curValue - stock.avg * stock.qty).toFixed(2)}
                 </td>
-                <td className={profClass}>{stock.net}</td>
+                <td className={profClass}>{netChange}%</td>
                 <td className={dayClass}>{stock.day}</td>
               </tr>
             );

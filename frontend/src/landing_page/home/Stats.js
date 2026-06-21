@@ -1,95 +1,89 @@
 import React from "react";
 
+const stats = [
+  {
+    title: "Customer-first always",
+    copy:
+      "That's why 1.6+ crore customers trust Zerodha with ~ Rs. 6 lakh crores of equity investments, making us India's largest broker; contributing to 15% of daily retail exchange volumes in India.",
+  },
+  {
+    title: "No spam or gimmicks",
+    copy:
+      'No gimmicks, spam, "gamification", or annoying push notifications. High quality apps that you use at your pace, the way you like. Our philosophies.',
+  },
+  {
+    title: "The Zerodha universe",
+    copy:
+      "Not just an app, but a whole ecosystem. Our investments in 30+ fintech startups offer you tailored services specific to your needs.",
+  },
+  {
+    title: "Do better with money",
+    copy:
+      "With initiatives like Nudge and Kill Switch, we don't just facilitate transactions, but actively help you do better with your money.",
+  },
+];
+
+const titleStyle = {
+  fontSize: "1.25rem",
+  opacity: "0.9",
+  lineHeight: "1.6",
+  fontWeight: "500",
+};
+
+const copyStyle = {
+  fontSize: "1rem",
+  lineHeight: "1.8",
+  color: "gray",
+};
+
 function Stats() {
   return (
-    <div className="container">
-      <div className="row mb-5 mt-5">
-        <div
-          className="mt-5"
-          style={{ fontSize: "2rem", opacity: "0.9", fontWeight: "500" }}
-        >
-          Trust with confidence
+    <section className="container my-5 py-md-4">
+      <div className="row align-items-center g-4 g-lg-5">
+        <div className="col-12">
+          <h2
+            className="mb-0"
+            style={{
+              fontSize: "clamp(1.5rem, 4vw, 2rem)",
+              opacity: "0.9",
+              fontWeight: "500",
+            }}
+          >
+            Trust with confidence
+          </h2>
         </div>
-        <div className="col-5 p-5">
-          <p
-            style={{
-              fontSize: "1.25rem",
-              opacity: "0.9",
-              lineHeight: "1.6",
-              fontWeight: "500",
-            }}
-          >
-            Customer-first always
-          </p>
-          <p style={{ fontSize: "1rem", lineHeight: "1.8", color: "gray" }}>
-            That's why 1.6+ crore customers trust Zerodha with ~ ₹6 lakh crores
-            of equity investments, making us India’s largest broker;
-            contributing to 15% of daily retail exchange volumes in India.
-          </p>
-          <p
-            style={{
-              fontSize: "1.25rem",
-              opacity: "0.9",
-              lineHeight: "1.6",
-              fontWeight: "500",
-            }}
-          >
-            No spam or gimmicks
-          </p>
-          <p style={{ fontSize: "1rem", lineHeight: "1.8", color: "gray" }}>
-            No gimmicks, spam, "gamification", or annoying push notifications.
-            High quality apps that you use at your pace, the way you like. Our
-            philosophies.
-          </p>
-          <p
-            style={{
-              fontSize: "1.25rem",
-              opacity: "0.9",
-              lineHeight: "1.6",
-              fontWeight: "500",
-            }}
-          >
-            The Zerodha universe
-          </p>
-          <p style={{ fontSize: "1rem", lineHeight: "1.8", color: "gray" }}>
-            Not just an app, but a whole ecosystem. Our investments in 30+
-            fintech startups offer you tailored services specific to your needs.
-          </p>
-          <p
-            style={{
-              fontSize: "1.25rem",
-              opacity: "0.9",
-              lineHeight: "1.6",
-              fontWeight: "500",
-            }}
-          >
-            Do better with money
-          </p>
-          <p style={{ fontSize: "1rem", lineHeight: "1.8", color: "gray" }}>
-            With initiatives like Nudge and Kill Switch, we don't just
-            facilitate transactions, but actively help you do better with your
-            money.
-          </p>
+
+        <div className="col-12 col-lg-5 px-3 px-md-4">
+          {stats.map((item) => (
+            <div className="mb-4" key={item.title}>
+              <p className="mb-2" style={titleStyle}>
+                {item.title}
+              </p>
+              <p className="mb-0" style={copyStyle}>
+                {item.copy}
+              </p>
+            </div>
+          ))}
         </div>
-        <div className="col-7">
-          <img src="media/images/ecosystem.png" style={{ width: "100%" }} />
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <a href="/" style={{ textDecoration: "none" }} className="m-5">
-              Explore our products <i class="fa-solid fa-right-long"></i>
+
+        <div className="col-12 col-lg-7 text-center">
+          <img
+            src="media/images/ecosystem.png"
+            alt="Zerodha ecosystem"
+            className="img-fluid"
+          />
+          <div className="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-3 gap-sm-5 mt-4">
+            <a href="/" style={{ textDecoration: "none" }}>
+              Explore our products{" "}
+              <i className="fa-solid fa-right-long"></i>
             </a>
             <a href="/" style={{ textDecoration: "none" }}>
-              Try Kite demo <i class="fa-solid fa-right-long"></i>
+              Try Kite demo <i className="fa-solid fa-right-long"></i>
             </a>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

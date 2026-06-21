@@ -49,7 +49,7 @@ mongoose
       const holdings = await HoldingModel.find({});
       const updateHoldings = holdings.map(async (item) => {
         const change = Math.random() * 10 - 5;
-        const newPrice = Number((item.price + change).toFixed(2));
+        const newPrice = Math.max(1, Number((item.price + change).toFixed(2)));
 
         await HoldingModel.findByIdAndUpdate(item._id, {
           price: newPrice,
