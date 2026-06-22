@@ -218,4 +218,58 @@
     background: #9b9b9b;
     color: #fff;
   }
-  
+
+@media (max-width: 1024px) {
+  .container {
+    width: 60%;
+    left: 20%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    left: 2.5%;
+    height: auto;
+    max-height: 85vh;
+    overflow-y: auto;
+    bottom: 0;
+  }
+
+  .regular-order {
+    padding: 12px 16px;
+  }
+
+  .order-validity {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .inputs {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .inputs fieldset {
+    flex: 1 1 100px;
+    max-width: none;
+  }
+
+  .inputs fieldset input {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .options {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .buttons {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0 12px 16px;
+    position: static;
+  }
+}

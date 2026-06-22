@@ -58,11 +58,24 @@ const Signup = () => {
   };
 
   return (
-    <>
-      <div className="container mt-5 mb-5">
-        <div className="form_container " style={{ margin: "auto" }}>
-          <h2>Signup Account</h2>
-          <form onSubmit={handleSubmit}>
+    <section className="container my-5">
+      <div
+        className="form_container"
+        style={{
+          width: "100%",
+          margin: "auto",
+          padding: "clamp(1.25rem, 5vw, 2rem) clamp(1rem, 6vw, 3rem)",
+        }}
+      >
+        <h2
+          style={{
+            fontSize: "clamp(1.5rem, 5vw, 2rem)",
+            lineHeight: "1.3",
+          }}
+        >
+          Signup Account
+        </h2>
+        <form onSubmit={handleSubmit}>
             <div>
               <label htmlFor="email">Email</label>
               <input
@@ -93,15 +106,16 @@ const Signup = () => {
                 onChange={handleOnChange}
               />
             </div>
-            <button type="submit">Submit</button>
-            <span>
+            <button type="submit" style={{ width: "100%" }}>
+              Submit
+            </button>
+            <span className="text-center">
               Already have an account? <Link to={"/login"}>Login</Link>
             </span>
           </form>
           <ToastContainer />
-        </div>
       </div>
-    </>
+    </section>
   );
 };
 

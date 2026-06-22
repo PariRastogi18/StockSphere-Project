@@ -5,18 +5,19 @@ function CreateTicket() {
     <>
       <div className="container">
         <h2
+          className="px-2"
           style={{
-            fontSize: "1.75rem",
+            fontSize: "clamp(1.25rem, 4vw, 1.75rem)",
             lineHeight: "1.25",
             fontWeight: "500",
-            marginTop: "5rem",
+            marginTop: "clamp(2rem, 6vw, 5rem)",
             marginBottom: "2rem",
           }}
         >
           To create a ticket, select a relevant topic
         </h2>
-        <div className="row">
-          <div className="col">
+        <div className="row g-4">
+          <div className="col-12 col-sm-6 col-lg-3">
             <p
               style={{
                 fontSize: "1.25rem",
@@ -85,7 +86,7 @@ function CreateTicket() {
               </li>
             </ul>
           </div>
-          <div className="col">
+          <div className="col-12 col-sm-6 col-lg-3">
             <p
               style={{
                 fontSize: "1.25rem",
@@ -154,7 +155,7 @@ function CreateTicket() {
               </li>
             </ul>
           </div>
-          <div className="col">
+          <div className="col-12 col-sm-6 col-lg-3">
             <p
               style={{
                 fontSize: "1.25rem",
@@ -234,14 +235,7 @@ function CreateTicket() {
               </li>
             </ul>
           </div>
-          <div
-            className="col"
-            style={{
-              backgroundColor: "#f2dbbc",
-              height: "7rem",
-              borderLeft: "5px solid #ff9100",
-            }}
-          >
+          <div className="col-12 col-sm-6 col-lg-3 ticket-alert-box">
             <ul>
               <li
                 style={{
@@ -264,8 +258,8 @@ function CreateTicket() {
             </ul>
           </div>
         </div>
-        <div className="row" style={{ marginTop: "3rem" }}>
-          <div className="col">
+        <div className="row g-4" style={{ marginTop: "3rem" }}>
+          <div className="col-12 col-sm-6 col-lg-3">
             <p
               style={{
                 fontSize: "1.25rem",
@@ -323,7 +317,7 @@ function CreateTicket() {
               </li>
             </ul>
           </div>
-          <div className="col">
+          <div className="col-12 col-sm-6 col-lg-3">
             <p
               style={{
                 fontSize: "1.25rem",
@@ -403,7 +397,7 @@ function CreateTicket() {
               </li>
             </ul>
           </div>
-          <div className="col">
+          <div className="col-12 col-sm-6 col-lg-3">
             <p
               style={{
                 fontSize: "1.25rem",
@@ -483,7 +477,7 @@ function CreateTicket() {
               </li>
             </ul>
           </div>
-          <div className="col">
+          <div className="col-12 col-sm-6 col-lg-3">
             <p
               style={{
                 fontSize: "1.15rem",

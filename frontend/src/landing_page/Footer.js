@@ -5,20 +5,15 @@ function Footer() {
     <>
       <div className=" mt-5 border-top" style={{ backgroundColor: "#fbfbfb" }}>
         <div className="container  p-3">
-          <div className="row mb-5">
-            <div className="col">
+          <div className="row mb-5 g-4">
+            <div className="col-12 col-md-6 col-lg-3">
               <img
                 src="media/images/logo.svg"
-                style={{ width: "50%", marginBottom: "30px" }}
+                style={{ width: "clamp(120px, 50%, 200px)", marginBottom: "30px" }}
                 alt="logo"
               />
               <p>© 2010 - 2026, Zerodha Broking Ltd. All rights reserved.</p>
-              <ul
-                style={{
-                  listStyle: "none",
-                  display: "flex",
-                }}
-              >
+              <ul className="footer-social-list">
                 <li>
                   <a
                     href="#"
@@ -64,13 +59,7 @@ function Footer() {
                   </a>
                 </li>
               </ul>
-              <ul
-                style={{
-                  listStyle: "none",
-                  display: "flex",
-                  marginTop: "2.5rem",
-                }}
-              >
+              <ul className="footer-social-list" style={{ marginTop: "2.5rem" }}>
                 <li>
                   <a
                     href="#"
@@ -105,16 +94,16 @@ function Footer() {
                   </a>
                 </li>
               </ul>
-              <div className="row mt-5">
-                <div className="col" style={{ width: "50%" }}>
-                  <img src="media/images/googlePlayBadge.svg" />
+              <div className="row mt-4 g-3">
+                <div className="col-6">
+                  <img src="media/images/googlePlayBadge.svg" alt="Google Play" className="img-fluid" />
                 </div>
-                <div className="col" style={{ width: "50%" }}>
-                  <img src="media/images/appstoreBadge.svg" />
+                <div className="col-6">
+                  <img src="media/images/appstoreBadge.svg" alt="App Store" className="img-fluid" />
                 </div>
               </div>
             </div>
-            <div className="col">
+            <div className="col-12 col-md-6 col-lg-3">
               <ul style={{ listStyle: "none" }}>
                 <li
                   style={{
@@ -192,7 +181,7 @@ function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="col">
+            <div className="col-12 col-md-6 col-lg-3">
               <ul style={{ listStyle: "none" }}>
                 <li
                   style={{
@@ -270,7 +259,7 @@ function Footer() {
                 </li>
               </ul>
             </div>
-            <div className="col">
+            <div className="col-12 col-md-6 col-lg-3">
               <ul style={{ listStyle: "none" }}>
                 <li
                   style={{
@@ -479,11 +468,11 @@ function Footer() {
               Arbitration mechanism. Fixed deposits are regulated by the Reserve
               Bank of India (RBI).
             </p>
-            <p style={{ textAlign: "center", marginTop: "1.5rem" }}>
-              NSE &nbsp;&nbsp; BSE &nbsp;&nbsp; MCX &nbsp;&nbsp; MSEI
-              &nbsp;&nbsp; Terms & conditions&nbsp; &nbsp; Policies & procedures
-              &nbsp;&nbsp; Privacy policy &nbsp; &nbsp; Disclosure For
-              investor's attention &nbsp;&nbsp; Investor &nbsp;&nbsp; charter
+            <p className="footer-legal-links">
+              NSE &nbsp; BSE &nbsp; MCX &nbsp; MSEI
+              &nbsp; Terms & conditions &nbsp; Policies & procedures
+              &nbsp; Privacy policy &nbsp; Disclosure For investor's attention
+              &nbsp; Investor charter
             </p>
           </div>
         </div>

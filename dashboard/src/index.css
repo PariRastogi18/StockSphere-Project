@@ -841,3 +841,207 @@ hr {
 .action:hover {
   background-color: rgb(212, 212, 212);
 }
+
+/* ── Responsive layout ── */
+
+.order-table {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.order-table table {
+  min-width: 600px;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-container {
+    flex-direction: column;
+    height: auto;
+    min-height: calc(100vh - 10vh);
+  }
+
+  .watchlist-container {
+    flex-basis: auto;
+    width: 100%;
+    max-height: 45vh;
+    order: 2;
+    border-top: 1px solid rgb(236, 235, 235);
+  }
+
+  .content {
+    flex-basis: auto;
+    width: 100%;
+    order: 1;
+    height: auto;
+    min-height: 50vh;
+    padding: 4% 3%;
+  }
+
+  .watchlist-number {
+    width: 100%;
+    position: relative;
+    left: auto;
+    bottom: auto;
+  }
+
+  .menu-container {
+    flex-basis: auto;
+    width: 100%;
+    padding: 8px 12px;
+  }
+
+  .indices-container {
+    flex-basis: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .topbar-container {
+    flex-direction: column;
+    height: auto;
+    min-height: 10vh;
+  }
+
+  .indices-container {
+    border-right: none;
+    border-bottom: 1px solid rgb(224, 224, 224);
+    padding: 8px 12px;
+    justify-content: space-between;
+  }
+
+  .nifty,
+  .sensex {
+    flex-basis: auto;
+    flex: 1;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .menu-container {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .menus {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .menus ul {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menus li {
+    margin-right: 16px;
+    flex-shrink: 0;
+  }
+
+  .menus hr {
+    display: none;
+  }
+
+  .profile {
+    margin-left: 0;
+    flex-shrink: 0;
+  }
+
+  .profile .username {
+    display: none;
+  }
+
+  .data {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .data hr {
+    display: none;
+  }
+
+  .data .first,
+  .data .second {
+    flex: 1 1 140px;
+  }
+
+  .row {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+  }
+
+  .col {
+    flex-basis: 100%;
+    min-width: 0;
+  }
+
+  .funds {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .table {
+    padding: 5% 4%;
+  }
+
+  .orders {
+    height: auto;
+    min-height: 70vh;
+  }
+
+  .username h6 {
+    font-size: 1.25rem;
+  }
+
+  .data .first h3 {
+    font-size: 2rem;
+  }
+
+  .col h5 {
+    font-size: 1.4rem;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .order-table th,
+  .order-table td {
+    padding: 8px 6px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 5% 3%;
+  }
+
+  .watchlist-container {
+    max-height: 35vh;
+  }
+
+  .index,
+  .index-points,
+  .percent {
+    font-size: 0.7rem;
+  }
+
+  .menu {
+    font-size: 0.75rem;
+  }
+
+  .btn {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+}

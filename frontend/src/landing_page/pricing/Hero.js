@@ -4,12 +4,13 @@ function Home() {
   return (
     <>
       <h1
+        className="px-3"
         style={{
-          fontSize: "1.75rem",
+          fontSize: "clamp(1.25rem, 4vw, 1.75rem)",
           lineHeight: "1.25",
           fontWeight: "500",
           textAlign: "center",
-          marginTop: "5rem",
+          marginTop: "clamp(2rem, 6vw, 5rem)",
         }}
       >
         Charge
@@ -29,15 +30,17 @@ function Home() {
       </p>
 
       <div className="container mb-5">
-        <div className="row">
-          <div className="col" style={{ textAlign: "center" }}>
+        <div className="row g-4">
+          <div className="col-12 col-md-4 text-center">
             <img
               src="media/images/pricing0.svg"
-              style={{ width: "250px", marginBottom: "15px" }}
+              className="img-fluid"
+              style={{ maxWidth: "250px", marginBottom: "15px" }}
+              alt="Free equity delivery"
             />
             <h2
               style={{
-                fontSize: "1.75rem",
+                fontSize: "clamp(1.25rem, 3vw, 1.75rem)",
                 lineHeight: "1.6",
                 fontWeight: "500",
                 marginBottom: "20px",
@@ -57,14 +60,16 @@ function Home() {
               ₹ 0 brokerage.
             </p>
           </div>
-          <div className="col " style={{ textAlign: "center" }}>
+          <div className="col-12 col-md-4 text-center">
             <img
               src="media/images/other-trades.svg"
-              style={{ width: "250px", marginBottom: "15px" }}
+              className="img-fluid"
+              style={{ maxWidth: "250px", marginBottom: "15px" }}
+              alt="Intraday and F&O trades"
             />
             <h2
               style={{
-                fontSize: "1.75rem",
+                fontSize: "clamp(1.25rem, 3vw, 1.75rem)",
                 lineHeight: "1.6",
                 fontWeight: "500",
                 marginBottom: "20px",
@@ -85,14 +90,16 @@ function Home() {
               Flat ₹20 on all option trades.
             </p>
           </div>
-          <div className="col " style={{ textAlign: "center" }}>
+          <div className="col-12 col-md-4 text-center">
             <img
               src="media/images/pricing0.svg"
-              style={{ width: "250px", marginBottom: "15px" }}
+              className="img-fluid"
+              style={{ maxWidth: "250px", marginBottom: "15px" }}
+              alt="Free direct MF"
             />
             <h2
               style={{
-                fontSize: "1.75rem",
+                fontSize: "clamp(1.25rem, 3vw, 1.75rem)",
                 lineHeight: "1.6",
                 fontWeight: "500",
                 marginBottom: "20px",

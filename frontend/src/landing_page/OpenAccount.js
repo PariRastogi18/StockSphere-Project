@@ -27,21 +27,7 @@ function OpenAccount() {
             Modern platforms and apps, ₹0 investments, and flat ₹20 intraday and
             F&O trades.
           </p>
-          <Link
-            to="/signup"
-            className="fs-5 mb-5"
-            style={{
-              width: "20%",
-              margin: "0 auto",
-              backgroundColor: "blue",
-              borderRadius: "3px",
-              color: "white",
-              padding: "7px",
-              fontSize: "large",
-              border: "none",
-              textDecoration: "none",
-            }}
-          >
+          <Link to="/signup" className="open-account-btn fs-5 mb-5">
             Signup for free
           </Link>
         </div>

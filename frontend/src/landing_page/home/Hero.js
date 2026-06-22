@@ -33,25 +33,27 @@ function Hero() {
           Online platform to invest in stocks, derivatives, mutual funds, ETFs,
           bonds, and more.
         </p>
-        <Link
-          to="/signup"
-          className="d-inline-block mb-4 mb-md-5"
-          style={{
-            minWidth: "180px",
-            maxWidth: "260px",
-            width: "fit-content",
-            margin: "0 auto",
-            backgroundColor: "blue",
-            borderRadius: "3px",
-            color: "white",
-            padding: "9px 20px",
-            fontSize: "1.1rem",
-            border: "none",
-            textDecoration: "none",
-          }}
-        >
-          Signup for free
-        </Link>
+        <div>
+          <Link
+            to="/signup"
+            className="d-inline-block mb-4 mb-md-5"
+            style={{
+              minWidth: "180px",
+              maxWidth: "260px",
+              width: "fit-content",
+              margin: "0 auto",
+              backgroundColor: "blue",
+              borderRadius: "3px",
+              color: "white",
+              padding: "9px 20px",
+              fontSize: "1.1rem",
+              border: "none",
+              textDecoration: "none",
+            }}
+          >
+            Signup for free
+          </Link>
+        </div>
       </div>
     </section>
   );

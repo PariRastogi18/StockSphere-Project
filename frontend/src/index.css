@@ -140,3 +140,90 @@ span a {
     font-size: 1.5rem;
   }
 }
+
+/* ── Responsive utilities ── */
+
+.navbar-logo {
+  width: clamp(100px, 20vw, 160px);
+  height: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.form_container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.footer-social-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+}
+
+.footer-social-list li {
+  margin: 0;
+}
+
+.footer-legal-links {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.65rem;
+  line-height: 1.8;
+  word-break: break-word;
+}
+
+.footer-legal-links a {
+  color: gray;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.product-section {
+  margin-top: clamp(2rem, 6vw, 5rem);
+  margin-bottom: clamp(2rem, 6vw, 5rem);
+}
+
+.product-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.ticket-alert-box {
+  background-color: #f2dbbc;
+  min-height: 7rem;
+  border-left: 5px solid #ff9100;
+  padding: 1rem;
+}
+
+.open-account-btn {
+  display: inline-block;
+  width: auto;
+  min-width: 180px;
+  max-width: 260px;
+  margin: 0 auto;
+  background-color: blue;
+  border-radius: 3px;
+  color: white;
+  padding: 10px 24px;
+  font-size: 1.1rem;
+  border: none;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .form_container {
+    padding: 1.25rem 1rem;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+}
