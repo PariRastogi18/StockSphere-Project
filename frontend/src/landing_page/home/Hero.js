@@ -7,7 +7,7 @@ function Hero() {
       <div className="row justify-content-center text-center px-3 py-4 px-md-5 py-md-5">
         <img
           src="media/images/homeHero.png"
-          alt="Online investing platform"
+          alt="Hero img"
           className="img-fluid mb-4 mb-md-5"
           style={{ maxWidth: "780px", width: "100%" }}
         />
