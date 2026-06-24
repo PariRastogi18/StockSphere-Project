@@ -22,17 +22,19 @@ function Hero() {
         >
           Invest in everything
         </h1>
-        <p
-          className="mx-auto mb-4 mb-md-5"
-          style={{
-            maxWidth: "720px",
-            fontSize: "clamp(1rem, 2.5vw, 1.25rem)",
-            lineHeight: "1.6",
-          }}
-        >
-          Online platform to invest in stocks, derivatives, mutual funds, ETFs,
-          bonds, and more.
-        </p>
+        <div className="row">
+          <p
+            className="mx-auto mb-4 mb-md-5"
+            style={{
+              maxWidth: "720px",
+              fontSize: "clamp(1rem, 2.5vw, 1.25rem)",
+              lineHeight: "1.6",
+            }}
+          >
+            Online platform to invest in stocks, derivatives, mutual funds,
+            ETFs, bonds, and more.
+          </p>
+        </div>
         <div className="row">
           <Link
             to="/signup"
