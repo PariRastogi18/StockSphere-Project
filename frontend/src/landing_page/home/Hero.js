@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Hero() {
   return (
     <section className="container">
-      <div className="row justify-content-center text-center px-3 py-4 px-md-5 py-md-5">
+      <div className="d-flex flex-column align-items-center text-center px-3 py-4 px-md-5 py-md-5">
         <img
           src="media/images/homeHero.png"
           alt="Hero img"
@@ -22,40 +22,38 @@ function Hero() {
         >
           Invest in everything
         </h1>
-        <div className="row">
-          <p
-            className="mx-auto mb-4 mb-md-5"
-            style={{
-              maxWidth: "720px",
-              fontSize: "clamp(1rem, 2.5vw, 1.25rem)",
-              lineHeight: "1.6",
-            }}
-          >
-            Online platform to invest in stocks, derivatives, mutual funds,
-            ETFs, bonds, and more.
-          </p>
-        </div>
-        <div className="text-center">
-          <Link
-            to="/signup"
-            className="d-inline-block mb-4 mb-md-5 "
-            style={{
-              minWidth: "180px",
-              maxWidth: "260px",
-              width: "fit-content",
-              margin: "0 auto",
-              backgroundColor: "blue",
-              borderRadius: "3px",
-              color: "white",
-              padding: "9px 20px",
-              fontSize: "1.1rem",
-              border: "none",
-              textDecoration: "none",
-            }}
-          >
-            Signup for free
-          </Link>
-        </div>
+
+        <p
+          className="mx-auto mb-4 mb-md-5"
+          style={{
+            maxWidth: "720px",
+            fontSize: "clamp(1rem, 2.5vw, 1.25rem)",
+            lineHeight: "1.6",
+          }}
+        >
+          Online platform to invest in stocks, derivatives, mutual funds, ETFs,
+          bonds, and more.
+        </p>
+
+        <Link
+          to="/signup"
+          className="d-inline-block mb-4 mb-md-5 "
+          style={{
+            minWidth: "180px",
+            maxWidth: "260px",
+            width: "fit-content",
+            margin: "0 auto",
+            backgroundColor: "blue",
+            borderRadius: "3px",
+            color: "white",
+            padding: "9px 20px",
+            fontSize: "1.1rem",
+            border: "none",
+            textDecoration: "none",
+          }}
+        >
+          Signup for free
+        </Link>
       </div>
     </section>
   );
