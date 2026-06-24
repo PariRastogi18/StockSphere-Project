@@ -35,10 +35,10 @@ function Hero() {
             ETFs, bonds, and more.
           </p>
         </div>
-        <div className="row">
+        <div className="text-center">
           <Link
             to="/signup"
-            className="d-inline-block mb-4 mb-md-5"
+            className="d-inline-block mb-4 mb-md-5 "
             style={{
               minWidth: "180px",
               maxWidth: "260px",
