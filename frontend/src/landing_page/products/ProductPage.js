@@ -3,8 +3,6 @@ import Hero from "./Hero";
 import LeftImg from "./LeftImg";
 import RightImg from "./RightImg";
 import Universe from "./Universe";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
 
 function ProductPage() {
   return (
