@@ -33,7 +33,7 @@ function Hero() {
           Online platform to invest in stocks, derivatives, mutual funds, ETFs,
           bonds, and more.
         </p>
-        <div>
+        <div className="row">
           <Link
             to="/signup"
             className="d-inline-block mb-4 mb-md-5"
