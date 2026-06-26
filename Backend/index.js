@@ -21,7 +21,8 @@ app.use(
       "https://stock-sphere-project.vercel.app",
       "https://stock-sphere-project-mtil.vercel.app",
     ],
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   }),
 );
@@ -36,8 +37,6 @@ const io = new Server(server, {
     credentials: true,
   },
 });
-
-app.use(cors());
 
 app.use(cookieParser());
 
