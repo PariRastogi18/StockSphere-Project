@@ -18,7 +18,7 @@ app.use(bodyParse.json());
 // app.use(
 //   cors({
 //     origin: [
-//       "https://stock-sphere-project-43auyjcpz-pari-rastogis-projects.vercel.app",
+//       "https://stock-sphere-project.vercel.app",
 //       "https://stock-sphere-project-mtil.vercel.app",
 //     ],
 //     methods: ["GET", "POST", "PUT", "DELETE"],
