@@ -106,6 +106,7 @@ REACT_APP_API_URL=http://localhost:5000
 Add screenshots of:
 
 - Home Page
+  
   <img width="1497" height="678" alt="image" src="https://github.com/user-attachments/assets/0044c176-e699-477e-aa3d-7e2bb7fcf8be" />
 
 - Login Page
@@ -117,12 +118,15 @@ Add screenshots of:
   <img width="527" height="635" alt="image" src="https://github.com/user-attachments/assets/0f18cbac-d69a-425d-bddc-3a03471c8d55" />
 
 - Dashboard
+  
   <img width="1512" height="667" alt="image" src="https://github.com/user-attachments/assets/59f7fe3f-fdac-43ba-b0cc-b599bece2039" />
 
 - Holdings
+  
   <img width="1505" height="672" alt="image" src="https://github.com/user-attachments/assets/b18921d3-81de-4741-bd97-73ae7a203b1a" />
   
 - Positions
+  
   <img width="1520" height="527" alt="image" src="https://github.com/user-attachments/assets/43afab4b-489f-4a4c-b0ec-dd74f7ff9eb2" />
 
 
