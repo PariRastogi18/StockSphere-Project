@@ -26,16 +26,13 @@ app.use(bodyParse.json());
 //   }),
 // );
 
-// const io = new Server(server, {
-//   cors: {
-//     origin: [
-//       "https://stock-sphere-project-43auyjcpz-pari-rastogis-projects.vercel.app",
-//       "https://stock-sphere-project-mtil.vercel.app",
-//     ],
-//     methods: ["GET", "POST", "PUT", "DELETE"],
-//     credentials: true,
-//   },
-// });
+const io = new Server(server, {
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  },
+});
 
 app.use(cors());
 
@@ -102,12 +99,12 @@ app.put("/addOrder", async (req, res) => {
   res.send("Order Saved!");
 });
 
-// io.on("connection", (socket) => {
-//   console.log("User connected", socket.id);
-//   socket.on("disconnect", () => {
-//     console.log("User disconnected", socket.id);
-//   });
-// });
+io.on("connection", (socket) => {
+  console.log("User connected", socket.id);
+  socket.on("disconnect", () => {
+    console.log("User disconnected", socket.id);
+  });
+});
 
 server.listen(PORT, () => {
   console.log(`Server run on port ${PORT}`);
