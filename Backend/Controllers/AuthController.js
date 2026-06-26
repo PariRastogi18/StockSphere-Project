@@ -11,7 +11,14 @@ module.exports.Signup = async (req, res, next) => {
     if (existingUser) {
       return res.json({ message: "User already exists" });
     }
-    const user = await User.create({ email, password, username, createdAt });
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
+    const user = await User.create({
+      email,
+      password: hashedPassword,
+      username,
+      createdAt,
+    });
     const token = createSecretToken(user._id);
     res.cookie("token", token, {
       httpOnly: true,

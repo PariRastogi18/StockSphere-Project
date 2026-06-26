@@ -29,6 +29,7 @@ const Signup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("submitted");
     try {
       const { data } = await axios.post(
         `${process.env.REACT_APP_API_URL}/signup`,
@@ -49,7 +50,8 @@ const Signup = () => {
         handleError(message);
       }
     } catch (error) {
-      console.log(error);
+      console.log("Signup error=>", error);
+      console.log(error.response);
     }
     setInputValue({
       ...inputValue,
