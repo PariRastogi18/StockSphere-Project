@@ -43,6 +43,11 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.send("Backend is running");
 });
+app.post("/test", (req, res) => {
+  console.log("TEST HIT");
+  console.log(req.body);
+  res.json({ success: true });
+});
 
 app.use("/", authRoute);
 
