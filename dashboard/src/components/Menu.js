@@ -17,12 +17,14 @@ const Menu = () => {
   const logout = async () => {
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/logout",
+        "https://stocksphere-project.onrender.com/logout",
         {},
         { withCredentials: "true" },
       );
       if (data.success) {
-        window.location.replace("http://localhost:3000/login");
+        window.location.replace(
+          "https://stock-sphere-project.vercel.app//login",
+        );
       }
     } catch (error) {
       console.log(error);

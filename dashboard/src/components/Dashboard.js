@@ -17,16 +17,20 @@ const Dashboard = () => {
     const verifyUser = async () => {
       try {
         const { data } = await axios.post(
-          "http://localhost:5000/verify",
+          "https://stocksphere-project.onrender.com/verify",
           {},
           { withCredentials: true },
         );
 
         if (!data.status) {
-          window.location.replace("http://localhost:3000/login");
+          window.location.replace(
+            "https://stock-sphere-project.vercel.app/login",
+          );
         }
       } catch (err) {
-        window.location.replace("http://localhost:3000/login");
+        window.location.replace(
+          "https://stock-sphere-project.vercel.app/login",
+        );
       }
     };
 
