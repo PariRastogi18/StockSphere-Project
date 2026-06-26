@@ -51,7 +51,7 @@ const Login = () => {
         handleSuccess(message);
         setTimeout(() => {
           window.location.replace(
-            "https://stock-sphere-project-mtil.vercel.app/",
+            "https://stock-sphere-project-mtil.vercel.app",
           );
         }, 1000);
       } else {
