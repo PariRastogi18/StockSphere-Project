@@ -17,7 +17,10 @@ const server = http.createServer(app);
 app.use(bodyParse.json());
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:3001"],
+    origin: [
+      "https://stock-sphere-project-43auyjcpz-pari-rastogis-projects.vercel.app/",
+      "https://stock-sphere-project-mtil.vercel.app/",
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   }),
