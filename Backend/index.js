@@ -15,20 +15,23 @@ const { OrderModel } = require("./Model/OrderModel");
 const app = express();
 const server = http.createServer(app);
 app.use(bodyParse.json());
-// app.use(
-//   cors({
-//     origin: [
-//       "https://stock-sphere-project.vercel.app",
-//       "https://stock-sphere-project-mtil.vercel.app",
-//     ],
-//     methods: ["GET", "POST", "PUT", "DELETE"],
-//     credentials: true,
-//   }),
-// );
+app.use(
+  cors({
+    origin: [
+      "https://stock-sphere-project.vercel.app",
+      "https://stock-sphere-project-mtil.vercel.app",
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  }),
+);
 
 const io = new Server(server, {
   cors: {
-    origin: "*",
+    origin: [
+      "https://stock-sphere-project.vercel.app",
+      "https://stock-sphere-project-mtil.vercel.app",
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   },
