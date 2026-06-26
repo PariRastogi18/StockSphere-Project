@@ -102,12 +102,12 @@ app.put("/addOrder", async (req, res) => {
   res.send("Order Saved!");
 });
 
-io.on("connection", (socket) => {
-  console.log("User connected", socket.id);
-  socket.on("disconnect", () => {
-    console.log("User disconnected", socket.id);
-  });
-});
+// io.on("connection", (socket) => {
+//   console.log("User connected", socket.id);
+//   socket.on("disconnect", () => {
+//     console.log("User disconnected", socket.id);
+//   });
+// });
 
 server.listen(PORT, () => {
   console.log(`Server run on port ${PORT}`);
