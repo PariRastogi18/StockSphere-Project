@@ -109,9 +109,11 @@ Add screenshots of:
   <img width="1497" height="678" alt="image" src="https://github.com/user-attachments/assets/0044c176-e699-477e-aa3d-7e2bb7fcf8be" />
 
 - Login Page
+  
   <img width="561" height="560" alt="image" src="https://github.com/user-attachments/assets/e2ba6bb6-8aae-45c8-9977-4560996049ba" />
   
 - Signup Page
+  
   <img width="527" height="635" alt="image" src="https://github.com/user-attachments/assets/0f18cbac-d69a-425d-bddc-3a03471c8d55" />
 
 - Dashboard
