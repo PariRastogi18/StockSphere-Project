@@ -33,7 +33,7 @@ const Login = () => {
     console.log("submitted");
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/login",
+        `${process.env.REACT_APP_API_URL}/login`,
         {
           ...inputValue,
         },
@@ -50,7 +50,9 @@ const Login = () => {
         localStorage.setItem("user", JSON.stringify(data.user));
         handleSuccess(message);
         setTimeout(() => {
-          window.location.replace("http://localhost:3001");
+          window.location.replace(
+            "https://stock-sphere-project-mtil.vercel.app/",
+          );
         }, 1000);
       } else {
         handleError(message);

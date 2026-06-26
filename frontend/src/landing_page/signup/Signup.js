@@ -31,7 +31,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/signup",
+        `${process.env.REACT_APP_API_URL}/login`,
         {
           ...inputValue,
         },
@@ -41,7 +41,9 @@ const Signup = () => {
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          window.location.replace("http://localhost:3001");
+          window.location.replace(
+            "https://stock-sphere-project-mtil.vercel.app/",
+          );
         }, 1000);
       } else {
         handleError(message);
@@ -76,44 +78,44 @@ const Signup = () => {
           Signup Account
         </h2>
         <form onSubmit={handleSubmit}>
-            <div>
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                name="email"
-                value={email}
-                placeholder="Enter your email"
-                onChange={handleOnChange}
-              />
-            </div>
-            <div>
-              <label htmlFor="email">Username</label>
-              <input
-                type="text"
-                name="username"
-                value={username}
-                placeholder="Enter your username"
-                onChange={handleOnChange}
-              />
-            </div>
-            <div>
-              <label htmlFor="password">Password</label>
-              <input
-                type="password"
-                name="password"
-                value={password}
-                placeholder="Enter your password"
-                onChange={handleOnChange}
-              />
-            </div>
-            <button type="submit" style={{ width: "100%" }}>
-              Submit
-            </button>
-            <span className="text-center">
-              Already have an account? <Link to={"/login"}>Login</Link>
-            </span>
-          </form>
-          <ToastContainer />
+          <div>
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              value={email}
+              placeholder="Enter your email"
+              onChange={handleOnChange}
+            />
+          </div>
+          <div>
+            <label htmlFor="email">Username</label>
+            <input
+              type="text"
+              name="username"
+              value={username}
+              placeholder="Enter your username"
+              onChange={handleOnChange}
+            />
+          </div>
+          <div>
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              value={password}
+              placeholder="Enter your password"
+              onChange={handleOnChange}
+            />
+          </div>
+          <button type="submit" style={{ width: "100%" }}>
+            Submit
+          </button>
+          <span className="text-center">
+            Already have an account? <Link to={"/login"}>Login</Link>
+          </span>
+        </form>
+        <ToastContainer />
       </div>
     </section>
   );
