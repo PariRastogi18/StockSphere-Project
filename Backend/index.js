@@ -15,33 +15,37 @@ const { OrderModel } = require("./Model/OrderModel");
 const app = express();
 const server = http.createServer(app);
 app.use(bodyParse.json());
-app.use(
-  cors({
-    origin: [
-      "https://stock-sphere-project-43auyjcpz-pari-rastogis-projects.vercel.app",
-      "https://stock-sphere-project-mtil.vercel.app",
-    ],
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-  }),
-);
+// app.use(
+//   cors({
+//     origin: [
+//       "https://stock-sphere-project-43auyjcpz-pari-rastogis-projects.vercel.app",
+//       "https://stock-sphere-project-mtil.vercel.app",
+//     ],
+//     methods: ["GET", "POST", "PUT", "DELETE"],
+//     credentials: true,
+//   }),
+// );
 
-const io = new Server(server, {
-  cors: {
-    origin: [
-      "https://stock-sphere-project-43auyjcpz-pari-rastogis-projects.vercel.app",
-      "https://stock-sphere-project-mtil.vercel.apsp",
-    ],
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-  },
-});
+// const io = new Server(server, {
+//   cors: {
+//     origin: [
+//       "https://stock-sphere-project-43auyjcpz-pari-rastogis-projects.vercel.app",
+//       "https://stock-sphere-project-mtil.vercel.app",
+//     ],
+//     methods: ["GET", "POST", "PUT", "DELETE"],
+//     credentials: true,
+//   },
+// });
 
 app.use(cors());
 
 app.use(cookieParser());
 
 app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.send("Backend is running");
+});
 
 app.use("/", authRoute);
 
